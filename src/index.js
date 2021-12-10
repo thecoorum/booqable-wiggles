@@ -155,23 +155,17 @@ function App() {
           <Text fontWeight="600" mb={2} fontSize="lg">
             Code
           </Text>
-          <Box
-            p={2}
-            mb={5}
-            background="white"
-            borderWidth={1}
-            borderRadius="lg"
-          >
-            <Flex>
-              <Code colorScheme="white">
-                &lt;span class="wiggle wiggle__{wiggle.value} wiggle--
-                {position.value} wiggle--{color.value}"&gt;
-                {phrase.length ? phrase : "dolor sit"}
-                &lt;/span&gt;
-              </Code>
-              <Button onClick={onCopy}>{hasCopied ? "Copied!" : "Copy"}</Button>
-            </Flex>
+          <Box p={2} mb={3} background="white" borderWidth={1} borderRadius="lg">
+            <Code colorScheme="white">
+              &lt;span class="wiggle wiggle__{wiggle.value} wiggle--
+              {position.value} wiggle--{color.value}"&gt;
+              {phrase.length ? phrase : "dolor sit"}
+              &lt;/span&gt;
+            </Code>
           </Box>
+          <Button mb={5} colorScheme="blue" width="100%" onClick={onCopy}>
+            {hasCopied ? "Copied!" : "Copy"}
+          </Button>
           <Text fontWeight="600" mb={2} fontSize="lg">
             Preview
           </Text>
