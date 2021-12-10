@@ -96,10 +96,10 @@ function App() {
     <ChakraProvider>
       <Box
         padding={4}
-        borderWidth={1}
-        borderRadius="lg"
+        borderWidth={{ base: 0, sm: 1 }}
+        borderRadius={{ base: 'none', sm: 'lg' }}
         maxWidth="xl"
-        margin="20px auto"
+        margin={{ base: "0", sm: "20px auto" }}
       >
         <FormControl id="phrase" mb={2}>
           <FormLabel>Phrase to wrap</FormLabel>
@@ -155,7 +155,13 @@ function App() {
           <Text fontWeight="600" mb={2} fontSize="lg">
             Code
           </Text>
-          <Box p={2} mb={3} background="white" borderWidth={1} borderRadius="lg">
+          <Box
+            p={2}
+            mb={3}
+            background="white"
+            borderWidth={1}
+            borderRadius="lg"
+          >
             <Code colorScheme="white">
               &lt;span class="wiggle wiggle__{wiggle.value} wiggle--
               {position.value} wiggle--{color.value}"&gt;
