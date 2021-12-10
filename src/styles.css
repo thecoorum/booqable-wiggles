@@ -1,0 +1,182 @@
+:root {
+  --primary-green: #74cc20;
+  --primary-blue: #2b80ff;
+  --secondary-blue: #22d1fc;
+  --secondary-orange: #ff7632;
+  --secondary-purple: #7535b6;
+  --secondary-pink: #dd3f3f;
+}
+
+.preview,
+.wiggle {
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+}
+
+.preview {
+  color: lightgray;
+
+  font-size: 32px;
+}
+.preview span {
+  font-size: 32px;
+}
+
+.wiggle {
+  color: black;
+
+  white-space: nowrap;
+
+  position: relative;
+
+  z-index: 1;
+}
+
+.wiggle:after {
+  content: "";
+
+  width: 110%;
+  height: 110%;
+
+  top: -5%;
+  left: -5%;
+
+  position: absolute;
+
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-size: contain;
+  -webkit-mask-size: contain;
+
+  z-index: -1;
+}
+
+.wiggle--green:after {
+  background-color: var(--primary-green);
+}
+
+.wiggle--blue:after {
+  background-color: var(--primary-blue);
+}
+
+.wiggle--secondary-blue:after {
+  background-color: var(--secondary-blue);
+}
+
+.wiggle--orange:after {
+  background-color: var(--secondary-orange);
+}
+
+.wiggle--purple:after {
+  background-color: var(--secondary-purple);
+}
+
+.wiggle--pink:after {
+  background-color: var(--secondary-pink);
+}
+
+.wiggle--top:after {
+  bottom: 95%;
+  left: -5%;
+
+  mask-position: bottom;
+  -webkit-mask-position: bottom;
+}
+
+.wiggle--center:after {
+  top: -5%;
+  left: -5%;
+
+  mask-position: center;
+  -webkit-mask-position: center;
+}
+
+.wiggle--bottom:after {
+  top: 95%;
+  left: -5%;
+
+  mask-position: top;
+  -webkit-mask-position: top;
+}
+
+.wiggle--left:after {
+  left: -100%;
+  top: -5%;
+
+  mask-position: right;
+  -webkit-mask-position: right;
+}
+
+.wiggle--right:after {
+  left: 100%;
+  top: -5%;
+
+  mask-position: left;
+  -webkit-mask-position: left;
+}
+
+.wiggle__circle-1:after {
+  mask-image: url("./assets/wiggles/circle-1.svg");
+  -webkit-mask-image: url("./assets/wiggles/circle-1.svg");
+}
+
+.wiggle__circle-2:after {
+  mask-image: url("./assets/wiggles/circle-2.svg");
+  -webkit-mask-image: url("./assets/wiggles/circle-2.svg");
+}
+
+.wiggle__circle-3:after {
+  mask-image: url("./assets/wiggles/circle-3.svg");
+  -webkit-mask-image: url("./assets/wiggles/circle-3.svg");
+}
+
+.wiggle__line-1:after {
+  mask-image: url("./assets/wiggles/line-1.svg");
+  -webkit-mask-image: url("./assets/wiggles/line-1.svg");
+}
+
+.wiggle__line-2:after {
+  mask-image: url("./assets/wiggles/line-2.svg");
+  -webkit-mask-image: url("./assets/wiggles/line-2.svg");
+}
+
+.wiggle__arrow-1:after {
+  mask-image: url("./assets/wiggles/arrow-1.svg");
+  -webkit-mask-image: url("./assets/wiggles/arrow-1.svg");
+}
+
+.wiggle__arrow-2:after {
+  mask-image: url("./assets/wiggles/arrow-2.svg");
+  -webkit-mask-image: url("./assets/wiggles/arrow-2.svg");
+}
+
+.wiggle__arrow-3:after {
+  mask-image: url("./assets/wiggles/arrow-3.svg");
+  -webkit-mask-image: url("./assets/wiggles/arrow-3.svg");
+}
+
+.wiggle__arrow-4:after {
+  mask-image: url("./assets/wiggles/arrow-4.svg");
+  -webkit-mask-image: url("./assets/wiggles/arrow-4.svg");
+}
+
+.wiggle__arrow-5:after {
+  mask-image: url("./assets/wiggles/arrow-5.svg");
+  -webkit-mask-image: url("./assets/wiggles/arrow-5.svg");
+}
+
+.wiggle__arrow-6:after {
+  mask-image: url("./assets/wiggles/arrow-6.svg");
+  -webkit-mask-image: url("./assets/wiggles/arrow-6.svg");
+}
+
+.wiggle__arrow-7:after {
+  mask-image: url("./assets/wiggles/arrow-7.svg");
+  -webkit-mask-image: url("./assets/wiggles/arrow-7.svg");
+}
+
+.wiggle__arrow-8:after {
+  mask-image: url("./assets/wiggles/arrow-8.svg");
+  -webkit-mask-image: url("./assets/wiggles/arrow-8.svg");
+}
