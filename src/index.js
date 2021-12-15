@@ -17,7 +17,7 @@ import {
 
 import "./styles.css";
 
-const WIGGLES = [
+const DOODLES = [
   { value: "arrow-1", label: "Arrow 1" },
   { value: "arrow-2", label: "Arrow 2" },
   { value: "arrow-3", label: "Arrow 3" },
@@ -50,14 +50,13 @@ const COLORS = [
 
 function App() {
   const [phrase, setPhrase] = useState("");
-  const [wiggle, setWiggle] = useState(WIGGLES[0]);
+  const [doodle, setDoodle] = useState(DOODLES[0]);
   const [position, setPosition] = useState(POSITIONS[0]);
   const [color, setColor] = useState(COLORS[0]);
 
-  const { hasCopied, onCopy } = useClipboard(`<span class="wiggle wiggle__${
-    wiggle.value
-  } wiggle--
-  ${position.value}">
+  const template = `doodle doodle__${doodle.value} doodle--${position.value} doodle--${color.value}`;
+
+  const { hasCopied, onCopy } = useClipboard(`<span class="${template}">
   ${phrase.length ? phrase : "dolor sit"}
   </span>`);
 
@@ -79,8 +78,8 @@ function App() {
       case "phrase":
         setPhrase(value);
         break;
-      case "wiggle":
-        setWiggle(WIGGLES.find((el) => el.value === e.target.value));
+      case "doodle":
+        setDoodle(DOODLES.find((el) => el.value === e.target.value));
         break;
       case "position":
         setPosition(POSITIONS.find((el) => el.value === e.target.value));
@@ -97,7 +96,7 @@ function App() {
       <Box
         padding={4}
         borderWidth={{ base: 0, sm: 1 }}
-        borderRadius={{ base: 'none', sm: 'lg' }}
+        borderRadius={{ base: "none", sm: "lg" }}
         maxWidth="xl"
         margin={{ base: "0", sm: "20px auto" }}
       >
@@ -109,24 +108,24 @@ function App() {
             placeholder="dolor sit"
           />
         </FormControl>
-        <FormControl id="wiggle" mb={2}>
-          <FormLabel>Select a wiggle</FormLabel>
+        <FormControl id="doodle" mb={2}>
+          <FormLabel>Select a doodle</FormLabel>
           <Select
-            value={wiggle.value}
-            onChange={(e) => handleChange(e, "wiggle")}
+            value={doodle.value}
+            onChange={(e) => handleChange(e, "doodle")}
           >
-            {WIGGLES.map((wiggle) => (
-              <option key={wiggle.value} value={wiggle.value}>
-                {wiggle.label}
+            {DOODLES.map((doodle) => (
+              <option key={doodle.value} value={doodle.value}>
+                {doodle.label}
               </option>
             ))}
           </Select>
           <FormHelperText>
-            It's not recommended to use circle wiggles for long phrases
+            It's not recommended to use circle doodles for long phrases
           </FormHelperText>
         </FormControl>
         <FormControl id="position" mb={5}>
-          <FormLabel>Select position of a wiggle</FormLabel>
+          <FormLabel>Select position of a doodle</FormLabel>
           <Select
             value={position.value}
             onChange={(e) => handleChange(e, "position")}
@@ -139,7 +138,7 @@ function App() {
           </Select>
         </FormControl>
         <FormControl id="position" mb={5}>
-          <FormLabel>Select color of a wiggle</FormLabel>
+          <FormLabel>Select color of a doodle</FormLabel>
           <Select
             value={color.value}
             onChange={(e) => handleChange(e, "color")}
@@ -163,8 +162,7 @@ function App() {
             borderRadius="lg"
           >
             <Code colorScheme="white">
-              &lt;span class="wiggle wiggle__{wiggle.value} wiggle--
-              {position.value} wiggle--{color.value}"&gt;
+              &lt;span class="{template}"&gt;
               {phrase.length ? phrase : "dolor sit"}
               &lt;/span&gt;
             </Code>
@@ -187,7 +185,7 @@ function App() {
             justifyContent={getPreviewPosition(position.value)}
           >
             <span
-              className={`wiggle wiggle__${wiggle.value} wiggle--${position.value} wiggle--${color.value}`}
+              className={template}
             >
               {phrase.length ? phrase : "dolor sit"}
             </span>
@@ -205,7 +203,7 @@ function App() {
             <span className="preview">
               lorem ipsum{" "}
               <span
-                className={`wiggle wiggle__${wiggle.value} wiggle--${position.value} wiggle--${color.value}`}
+                className={template}
               >
                 {phrase.length ? phrase : "dolor sit"}
               </span>{" "}

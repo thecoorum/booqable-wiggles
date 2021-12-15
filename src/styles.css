@@ -8,7 +8,7 @@
 }
 
 .preview,
-.wiggle {
+.doodle {
   font-family: sans-serif;
   font-weight: 700;
   font-size: 42px;
@@ -23,7 +23,7 @@
   font-size: 32px;
 }
 
-.wiggle {
+.doodle {
   color: black;
 
   white-space: nowrap;
@@ -33,7 +33,7 @@
   z-index: 1;
 }
 
-.wiggle:after {
+.doodle:after {
   content: "";
 
   width: 110%;
@@ -52,31 +52,31 @@
   z-index: -1;
 }
 
-.wiggle--green:after {
+.doodle--green:after {
   background-color: var(--primary-green);
 }
 
-.wiggle--blue:after {
+.doodle--blue:after {
   background-color: var(--primary-blue);
 }
 
-.wiggle--secondary-blue:after {
+.doodle--secondary-blue:after {
   background-color: var(--secondary-blue);
 }
 
-.wiggle--orange:after {
+.doodle--orange:after {
   background-color: var(--secondary-orange);
 }
 
-.wiggle--purple:after {
+.doodle--purple:after {
   background-color: var(--secondary-purple);
 }
 
-.wiggle--pink:after {
+.doodle--pink:after {
   background-color: var(--secondary-pink);
 }
 
-.wiggle--top:after {
+.doodle--top:after {
   bottom: 95%;
   left: -5%;
 
@@ -84,7 +84,7 @@
   -webkit-mask-position: bottom;
 }
 
-.wiggle--center:after {
+.doodle--center:after {
   top: -5%;
   left: -5%;
 
@@ -92,7 +92,7 @@
   -webkit-mask-position: center;
 }
 
-.wiggle--bottom:after {
+.doodle--bottom:after {
   top: 95%;
   left: -5%;
 
@@ -100,7 +100,7 @@
   -webkit-mask-position: top;
 }
 
-.wiggle--left:after {
+.doodle--left:after {
   left: -100%;
   top: -5%;
 
@@ -108,7 +108,7 @@
   -webkit-mask-position: right;
 }
 
-.wiggle--right:after {
+.doodle--right:after {
   left: 100%;
   top: -5%;
 
@@ -116,67 +116,67 @@
   -webkit-mask-position: left;
 }
 
-.wiggle__circle-1:after {
+.doodle__circle-1:after {
   mask-image: url("./assets/wiggles/circle-1.svg");
   -webkit-mask-image: url("./assets/wiggles/circle-1.svg");
 }
 
-.wiggle__circle-2:after {
+.doodle__circle-2:after {
   mask-image: url("./assets/wiggles/circle-2.svg");
   -webkit-mask-image: url("./assets/wiggles/circle-2.svg");
 }
 
-.wiggle__circle-3:after {
+.doodle__circle-3:after {
   mask-image: url("./assets/wiggles/circle-3.svg");
   -webkit-mask-image: url("./assets/wiggles/circle-3.svg");
 }
 
-.wiggle__line-1:after {
+.doodle__line-1:after {
   mask-image: url("./assets/wiggles/line-1.svg");
   -webkit-mask-image: url("./assets/wiggles/line-1.svg");
 }
 
-.wiggle__line-2:after {
+.doodle__line-2:after {
   mask-image: url("./assets/wiggles/line-2.svg");
   -webkit-mask-image: url("./assets/wiggles/line-2.svg");
 }
 
-.wiggle__arrow-1:after {
+.doodle__arrow-1:after {
   mask-image: url("./assets/wiggles/arrow-1.svg");
   -webkit-mask-image: url("./assets/wiggles/arrow-1.svg");
 }
 
-.wiggle__arrow-2:after {
+.doodle__arrow-2:after {
   mask-image: url("./assets/wiggles/arrow-2.svg");
   -webkit-mask-image: url("./assets/wiggles/arrow-2.svg");
 }
 
-.wiggle__arrow-3:after {
+.doodle__arrow-3:after {
   mask-image: url("./assets/wiggles/arrow-3.svg");
   -webkit-mask-image: url("./assets/wiggles/arrow-3.svg");
 }
 
-.wiggle__arrow-4:after {
+.doodle__arrow-4:after {
   mask-image: url("./assets/wiggles/arrow-4.svg");
   -webkit-mask-image: url("./assets/wiggles/arrow-4.svg");
 }
 
-.wiggle__arrow-5:after {
+.doodle__arrow-5:after {
   mask-image: url("./assets/wiggles/arrow-5.svg");
   -webkit-mask-image: url("./assets/wiggles/arrow-5.svg");
 }
 
-.wiggle__arrow-6:after {
+.doodle__arrow-6:after {
   mask-image: url("./assets/wiggles/arrow-6.svg");
   -webkit-mask-image: url("./assets/wiggles/arrow-6.svg");
 }
 
-.wiggle__arrow-7:after {
+.doodle__arrow-7:after {
   mask-image: url("./assets/wiggles/arrow-7.svg");
   -webkit-mask-image: url("./assets/wiggles/arrow-7.svg");
 }
 
-.wiggle__arrow-8:after {
+.doodle__arrow-8:after {
   mask-image: url("./assets/wiggles/arrow-8.svg");
   -webkit-mask-image: url("./assets/wiggles/arrow-8.svg");
 }
